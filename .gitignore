@@ -1,0 +1,22 @@
+# Archivos de configuración específicos de tu entorno
+.env
+*.sqlite3
+
+# Directorios generados por Django
+/__pycache__/
+/migrations/
+
+# Archivos estáticos y archivos generados por collectstatic
+/staticfiles/
+*.css
+*.js
+
+# Archivos generados por el comando "makemessages"
+locale/
+
+# Archivos de registro (logs)
+*.log
+
+# Virtual environment (por ejemplo, si usas virtualenv o venv)
+venv/
+env/
