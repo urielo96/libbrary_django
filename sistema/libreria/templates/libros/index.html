@@ -8,11 +8,14 @@
             Listar Libros
         </div>
         <div class="card-body">
+            <a name="" id="" class="btn btn-primary" href="{% url 'crear' %}" role="button">Agregar Libros</a>
             <h4 class="card-title">Libros</h4>
 
             <div class="table">
                 <table class="table table-primary">
                     <thead>
+
+                        
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Título</th>
@@ -22,15 +25,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
-                        <tr class="">
-                            <td scope="row">Item</td>
-                            <td>1</td>
-                            <td>Django con python</td>
-                            <td>Imagen.jpg</td>
+                        {% for libro in libros %}
+                        <tr >
+                            <td scope="row">{{libro.id}}</td>
+                            <td>{{libro.titulo}}</td>
+                            <td>
+                                <img src="{{libro.imagen.url}}" height = "100">
+                                
+                            
+                            </td>
+                            <td>{{libro.descripcion}}</td>
                             <td> <a name="" id="" class="btn btn-primary" href="{% url 'editar' %}" role="button">Editar</a> | 
                                 <a name="" id="" class="btn btn-primary" href="#" role="button">Borrar</a> </td>
                         </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
