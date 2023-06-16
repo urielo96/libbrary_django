@@ -1,2 +1,2 @@
-# libbrary_django
+# library_django
 My first project in django
