@@ -10,7 +10,9 @@ urlpatterns = [
     path("mi_pagina/", views.mi_pagina, name="mi_pagina"),
     path("libros",views.libros , name="libros"),
     path("libros/crear",views.crear , name="crear"),
-    path("(libros/editar",views.editar , name="editar"),
+    path("libros/editar",views.editar , name="editar"),
+    path("eliminar/<int:id>",views.eliminar,name="eliminar"),
+    path("libros/editar/<int:id>",views.editar,name="editar")
     
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
  
